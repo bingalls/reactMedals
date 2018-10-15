@@ -1,5 +1,5 @@
 # Top 10 Olympic Medals
-Lets you resort top performing countries at the winter olympics
+Lets you resort top performing countries at the Olympics
 
 ## Setup
 This is a front-end web application, bundled with a NodeJS server.
@@ -19,18 +19,17 @@ Unfortunately, the CORS file failed for me, when I try
 ```script
 curl -X OPTIONS https://s3-us-west-2.amazonaws.com/reuters.medals-widget/medals.json -i
 ```
+which make debugging CORS errors in a XHR GET request difficult.
 
 To avoid a (popular) hack like JSONP, or additional files / complexity of a proxy
 server, the mock `medals/Feed.js` is used, instead.
 
 The medals spec provided country flags as a sprite of PNGs. This adds
-complexity _hurts_ performance of modern web servers.
-I replaced this with crisper responsive SVGs, with better performance and
+complexity & _hurts_ performance of modern web servers.
+I replaced this with crisper, responsive SVGs, with better performance and
 public licensing, to conform to GitHub terms, and *your* usage.
 SVGs are easily resizable. The exception is Canada, which takes effort, unless
-you scale the tag externally.
-
-
+you scale its tag externally.
 
 ## Available Scripts
 

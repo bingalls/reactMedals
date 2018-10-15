@@ -12,25 +12,25 @@ class Medals extends Component {
     this.state = Feed;
   }
 
-  sortGold = event => {
+  sortGold = () => {
     Feed.list = Data.sort(Feed.list, 'gold');
     this.setState(Feed);
   };
 
   // noinspection JSUnusedLocalSymbols
-  sortSilver = event => {
+  sortSilver = () => {
     Feed.list = Data.sort(Feed.list, 'silver');
     this.setState(Feed);
   };
 
   // noinspection JSUnusedLocalSymbols
-  sortBronze = event => {
+  sortBronze = () => {
     Feed.list = Data.sort(Feed.list, 'bronze');
     this.setState(Feed);
   };
 
   // noinspection JSUnusedLocalSymbols
-  sortTotal = event => {
+  sortTotal = () => {
     Feed.list = Data.sort(Feed.list, 'total');
     this.setState(Feed);
   };

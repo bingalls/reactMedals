@@ -20,7 +20,7 @@ class Data {
       default:
         return reverse(sortBy(list, ['gold', 'silver', 'total', 'bronze']));
     }
-  };
+  }
 
   /**
    * Add a total column to an array of Olympic Medal objects
@@ -35,7 +35,7 @@ class Data {
       "bronze": country.bronze,
       "total": (country.gold + country.silver + country.bronze)
     }))
-  };
+  }
 }
 
 export default Data;
