@@ -1,13 +1,24 @@
+import axios from 'axios';
 // eslint-disable-next-line no-unused-vars
 import React, { Component } from 'react';
 import Data from './Data';
-import Feed from './Feed';
+// import Feed from './Feed';   // to mock AJAX
 import './medals.css';
 
+const Feed = {
+  list: []
+};
+
 class Medals extends Component {
+
   constructor(props) {
     super(props);
-    Feed.list = Data.totals(Data.sort(Feed.list));
+    // Feed.list = Data.totals(Data.sort(Feed.list));   // to mock AJAX & disable following block
+    axios.get('https://s3-us-west-2.amazonaws.com/reuters.medals-widget/medals.json')
+      .then(json => {
+        Feed.list = Data.totals(json.data);
+        this.setState(Feed);
+      });
     // noinspection JSValidateTypes
     this.state = Feed;
   }

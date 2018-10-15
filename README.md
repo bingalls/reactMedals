@@ -15,14 +15,8 @@ This React Medals component is built against a specification, with a few
 issues to overcome.
 Data comes from a feed from
 https://s3-us-west-2.amazonaws.com/reuters.medals-widget/medals.json
-Unfortunately, the CORS file failed for me, when I try
-```script
-curl -X OPTIONS https://s3-us-west-2.amazonaws.com/reuters.medals-widget/medals.json -i
-```
-which make debugging CORS errors in a XHR GET request difficult.
-
-To avoid a (popular) hack like JSONP, or additional files / complexity of a proxy
-server, the mock `medals/Feed.js` is used, instead.
+Comments are provided in Medals.js for an alternate mock feed, in case
+the service fails for you, as it had for me.
 
 The medals spec provided country flags as a sprite of PNGs. This adds
 complexity & _hurts_ performance of modern web servers.
