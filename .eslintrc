@@ -1,0 +1,26 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jasmine": true,
+    "node": true
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react"
+  ],
+  "rules": {
+    "camelcase": 0,               // Allow any case for variable naming
+    "curly": 2,                   // Require curly braces for all control statements
+    "disallowSpacesInAnonymousFuctionExpression": 0,
+    "no-underscore-dangle": 0,    // Allow leading underscores for (private) method names
+    "no-unused-vars": [2, {"args":"none"}],  // Disallow unused variables, except as function arguments
+    "no-use-before-define": 2,     // Disallow using variables and functions before they've been defined
+    "requireSpacesInAnonymousFunctionExpression": 0
+  }
+}

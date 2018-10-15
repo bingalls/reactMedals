@@ -1,0 +1,33 @@
+h1.medal {
+    color: darkgrey;
+    float: left;
+    padding-left: 2rem;
+}
+
+br.medal {
+    clear: both;
+}
+
+table.medal {
+    border-collapse: collapse;
+}
+
+td.big {
+    font-size: 1.3rem;
+}
+
+td.medal {
+    border: dimgrey;
+    border-bottom-color: grey;
+    border-bottom-style: solid;
+    border-bottom-width: thin;
+    padding: 0.4rem 1rem;
+}
+
+td.medalhead {
+    border: dimgrey;
+    border-bottom-color: grey;
+    border-bottom-style: solid;
+    border-bottom-width: thick;
+    padding: 0.4rem 1rem;
+}
