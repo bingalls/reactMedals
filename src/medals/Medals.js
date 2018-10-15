@@ -23,26 +23,8 @@ class Medals extends Component {
     this.state = Feed;
   }
 
-  sortGold = () => {
-    Feed.list = Data.sort(Feed.list, 'gold');
-    this.setState(Feed);
-  };
-
-  // noinspection JSUnusedLocalSymbols
-  sortSilver = () => {
-    Feed.list = Data.sort(Feed.list, 'silver');
-    this.setState(Feed);
-  };
-
-  // noinspection JSUnusedLocalSymbols
-  sortBronze = () => {
-    Feed.list = Data.sort(Feed.list, 'bronze');
-    this.setState(Feed);
-  };
-
-  // noinspection JSUnusedLocalSymbols
-  sortTotal = () => {
-    Feed.list = Data.sort(Feed.list, 'total');
+  sort = (key) => {
+    Feed.list = Data.sort(Feed.list, key);
     this.setState(Feed);
   };
 
@@ -60,10 +42,10 @@ class Medals extends Component {
           <td className="medalhead"> </td>
           <td className="medalhead"> </td>
           <td className="medalhead"> </td>
-          <td className="medalhead"><a href={this.void()} onClick={this.sortGold}><img alt="Gold" src={"/gold.svg"} /></a></td>
-          <td className="medalhead"><a href={this.void()} onClick={this.sortSilver}><img alt="Silver" src={"/silver.svg"} /></a></td>
-          <td className="medalhead"><a href={this.void()} onClick={this.sortBronze}><img alt="Bronze" src={"/bronze.svg"} /></a></td>
-          <td className="medalhead"><a href={this.void()} onClick={this.sortTotal}>TOTAL</a></td>
+          <td className="medalhead"><a href={this.void()} onClick={() => this.sort('gold')}><img alt="Gold" src={"/gold.svg"} /></a></td>
+          <td className="medalhead"><a href={this.void()} onClick={() => this.sort('silver')}><img alt="Silver" src={"/silver.svg"} /></a></td>
+          <td className="medalhead"><a href={this.void()} onClick={() => this.sort('bronze')}><img alt="Bronze" src={"/bronze.svg"} /></a></td>
+          <td className="medalhead"><a href={this.void()} onClick={() => this.sort('total')}>TOTAL</a></td>
         </tr>
         {(this.state.list || []).slice(0,10).map((item, i) => (
           <tr key={i}>
