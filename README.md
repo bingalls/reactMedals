@@ -1,5 +1,7 @@
 # Top 10 Olympic Medals
-Lets you resort top performing countries at the Olympics
+Lets you sort top performing countries at the Olympics
+
+![screenshot](medals.png "screenshot")
 
 ## Setup
 Quickly:
