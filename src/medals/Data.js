@@ -24,16 +24,17 @@ class Data {
 
   /**
    * Add a total column to an array of Olympic Medal objects
+   * Also sanitizes data.
    * @param {Array} list Country medal objects
    * @returns {Array} Country medal objects
    */
   static totals(list) {
     return list.map((country) => ({
-      "code": country.code,
-      "gold": country.gold,
-      "silver": country.silver,
-      "bronze": country.bronze,
-      "total": (country.gold + country.silver + country.bronze)
+      "code": country.code.substr(0,3),     // sanitize data
+      "gold": parseInt(country.gold, 10),
+      "silver": parseInt(country.silver, 10),
+      "bronze": parseInt(country.bronze, 10),
+      "total": parseInt(country.gold + country.silver + country.bronze, 10)
     }))
   }
 }
